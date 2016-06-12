@@ -6,7 +6,7 @@ import com.fuzzylite.variable.{InputVariable, OutputVariable}
 /**
   * Created by Andrii on 6/12/2016.
   */
-class Main extends App {
+object Main extends App {
   val engine = new Engine()
   engine.setName("simple-dimmer")
 
@@ -42,11 +42,12 @@ class Main extends App {
   }
 
   for (i <- 0 until 50) {
-    val light = ambient.getMinimum() + i * (ambient.range() / 50)
+    val light: java.lang.Double = ambient.getMinimum() + i * (ambient.range() / 50)
     ambient.setInputValue(light)
     engine.process()
+    val powerOutput: java.lang.Double = power.getOutputValue()
     FuzzyLite.logger().info(String.format(
       "Ambient.input = %s -> Power.output = %s",
-      Op.str(light), Op.str(power.getOutputValue())))
+      Op.str(light), Op.str(powerOutput)))
   }
 }
