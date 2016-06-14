@@ -38,8 +38,6 @@ class TearingKnowledgeBase {
 
 }
 
-object
-
 object InputDataProvider extends DataProvider[InputVariable]
 
 trait InputVariableInitializer extends VariableInitializer[InputVariable]

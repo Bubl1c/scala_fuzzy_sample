@@ -38,8 +38,6 @@ class SpeedKnowledgeBase {
 
 }
 
-object
-
 object InputDataProvider extends DataProvider[InputVariable]
 
 trait InputVariableInitializer extends VariableInitializer[InputVariable]
