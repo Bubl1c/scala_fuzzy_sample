@@ -56,9 +56,9 @@ object InitRB extends RuleBlockInitializer {
     r("if F is Average and n is Average and K is Average then v is Average")
     r("if F is Average and n is Fast and K is Average then v is Fast")
 
-    r("if F is Fast and n is Slow and K is Hard then v is Slow")
-    r("if F is Fast and n is Average and K is Hard then v is Average")
-    r("if F is Fast and n is Fast and K is Hard then v is Fast")
+    r("if F is High and n is Slow and K is Hard then v is Slow")
+    r("if F is High and n is Average and K is Hard then v is Average")
+    r("if F is High and n is Fast and K is Hard then v is Fast")
     ruleBlock
   }
 }
